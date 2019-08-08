@@ -69,15 +69,17 @@ class ConverHelper {
     ]
     
     class func convertVietNam(text: String) -> String {
-        var arr = Array(text.characters)
-        for var i=0; i<arr.count; i++ {
-            for var j=0; j<arrCoDau.count; j++ {
+        var arr =  text.charactersArray
+        
+        for i in 0..<arr.count {
+            for j in 0..<arrCoDau.count {
                 if (arr[i] == arrCoDau[j]) {
                     arr[i] = arrKhongDau[j]
                     break
                 }
             }
         }
+        
         return String(arr)
     }
 }
